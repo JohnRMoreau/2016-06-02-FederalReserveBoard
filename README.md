@@ -11,7 +11,7 @@ April 7 and 8, 2016
 
 ### Who
 
-[John Moreau](https://github.com/JohnRMoreau) and [Dirk Eddelbuettel)(https://github.com/eddelbuettel)
+[John Moreau](https://github.com/JohnRMoreau) and [Dirk Eddelbuettel](https://github.com/eddelbuettel)
 
 ### What
 
