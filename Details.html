@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Home</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<hr />
+<p>layout: workshop
+root: .</p>
+<h2>title: Data Carpentry at the Fed - Details</h2>
+<p><strong>April 7th - 8th, 2016</strong></p>
+<p><br><strong>Time:</strong> 8:30am - 4:30pm</p>
+<p><a href="#materials">Workshop materials</a> |  <a href="#schedule">Tenative Schedule</a></p>
+<p><a name="materials"></a></p>
+<h3>Workshop Materials</h3>
+<h4>About the Data</h4>
+<p>In this workshop, we will be using a subset of the Gapminder dataset <a href="http://www.gapminder.org">http://www.gapminder.org</a>. This is world wide statistical data collected and curated to allow for 
+a 'fact based worldview'. This data includes things like employment rates, birth rates, death rates, % of GDP that's Agriculture and many, many more data types. There are currently 519 overall, with time series for each. </p>
+<p>In this workshop we're going to be focusing just on
+- Country
+- Continent
+- Year data was collected
+- Life expectancy at birth
+- Total population
+- per-capita GDP</p>
+<p>We'll work with this data as a spreadsheet and read it in to R and SQL. It is also available as an R package
+(<a href="https://github.com/jennybc/gapminder">repo</a>, <a href="cloud.r-project.org/package=gapminder">CRAN</a>)
+and there are some nice summary statistics and visualizations. </p>
+<p>There's also a great TED talk by Hans Rosling on this dataset and some awesome statistics.<br />
+<a href="http://www.ted.com/talks/hans_rosling_shows_the_best_stats_you_ve_ever_seen?language=en">http://www.ted.com/talks/hans<em>rosling</em>shows<em>the<em>best</em>stats</em>you<em>ve</em>ever_seen?language=en</a></p>
+<p><strong>Downloading the data</strong><br />
+Download the data for this workshop from <a href="https://github.com/JohnRMoreau/2016-04-07-FederalReserveBoard/raw/gh-pages/data/gapminder-sql-data.zip">this link</a>. The data includes
+* Messy spreadsheet data - gapminder-messy.xls or gapminder-messy.xlsx
+* Messy data for cleaning in OpenRefine - gapminder-messy-openrefine.csv
+* Clean data for R and SQL - gapminder-FiveYearData.csv</p>
+<p><strong>Lesson materials</strong>
+* <a href="http://johnrmoreau.github.io/spreadsheet-gapminder-lesson">Spreadsheet lessons</a>
+* <a href="http://johnrmoreau.github.io/openrefine-gapminder-lesson">OpenRefine lessons</a>
+* <a href="http://tracykteal.github.io/r-novice-gapminder">R lessons</a>
+* <a href="http://johnrmoreau.github.io/sql-gapminder-lesson-DC">SQL lessons</a></p>
+<p><a name="schedule"></a></p>
+<h3>Tentative Schedule</h3>
+<h3>Day 1</h3>
+<table>
+<tr><td>8:30</td><td>Welcome and Introduction</td></tr>
+<tr><td>9:00</td><td><a href=http://johnrmoreau.github.io/spreadsheet-gapminder-lesson>Spreadsheets</a></td></tr>
+<tr><td>10:15</td><td>Coffee</td></tr>
+<tr><td>10:45</td><td><a href=http://johnrmoreau.github.io/openrefine-gapminder-lesson>OpenRefine for data cleaning</a></td></tr>
+<tr><td>12:00</td><td>Lunch</td></tr>
+<tr><td>1:00</td><td>
+Introduction to RStudio and R<br>
+- <a href=http://tracykteal.github.io/r-novice-gapminder/01-rstudio-intro.html>RStudio Introduction</a><br>
+- <a href=http://tracykteal.github.io/r-novice-gapminder/02-project-intro.html>Setting up a project in RStudio</a><br>
+- <a href=http://tracykteal.github.io/r-novice-gapminder/03-seeking-help.html>Getting help</a>
+</td></tr>
+<tr><td>2:30</td><td>Coffee</td></tr>
+<tr><td>2:45</td><td>Data types in R<br>
+- <a href=http://tracykteal.github.io/r-novice-gapminder/04-data-structures-part1.html>Data structures part 1</a><br>
+- <a href=http://tracykteal.github.io/r-novice-gapminder/05-data-structures-part2.html>Data structures part 2</a><br>
+- <a href=http://tracykteal.github.io/r-novice-gapminder/06-data-subsetting.html>Data subsetting</a><br>
+</td></tr>
+<tr><td>4:00</td><td>Wrap up</td></tr>
+</table>
+<h3>Day 2</h3>
+<table>
+<tr><td>8:30</td><td>Day 2 Welcome</td></tr>
+<tr><td>8:40</td><td><a href=http://johnrmoreau.github.io/sql-gapminder-lesson-DC>SQL for data management</a>
+</td></tr>
+<tr><td>10:15</td><td>Coffee</td></tr>
+<tr><td>10:30</td><td>SQL Part 2</td></tr>
+<tr><td>11:30</td><td>SQL and R</td></tr>
+<tr><td>12:00</td><td>Lunch</td></tr>
+
+<tr><td>1:00</td><td>Functions and data manipulation in R<br>
+- <a href=http://tracykteal.github.io/r-novice-gapminder/07-functions.html>Functions</a><br>
+- <a href=http://swcarpentry.github.io/r-novice-gapminder/12-plyr.html>plyr</a><br>
+- <a href=http://swcarpentry.github.io/r-novice-gapminder/13-dplyr.html>dplyr</a><br>
+</td></tr>
+
+<tr><td>2:30</td><td>
+Coffee</td></tr>
+
+<tr><td>2:45</td><td>
+Graphics and reporting in R<br>
+- <a href=http://tracykteal.github.io/r-novice-gapminder/08-plot-ggplot2.html>ggplot2 for Plotting</a><br>
+- <a href=http://resbaz.github.io/r-intermediate-gapminder/18-rmd.html>R Markdown and knitr</a> <br>
+- Capstone - Time Permitting<br>
+</td></tr>
+<tr><td>4:00</td><td>Wrap up</td></tr>
+</table>
+<h4>Additional Materials</h4>
+<h3><a name="before">Before the Workshop</h3>
+<h3><a name="setup"></a>Setup and Software Installation</h3>
+<p>To participate in this Data Carpentry workshop, you will need working copies of the software described at the setup page. For this workshop, it will be in a computer lab and the software has already been installed. For information on what was installed and how to install it on different operating systems, information is here:</p>
+<p><a href="http://datacarpentry.github.io/2015-06-30-FederalReserveBoard/install.html">Setup Instructions</a></p>
+<h3><a name="surveys"></a>Workshop surveys</h3>
+<p>You will receive a post-workshop survey after the workshop so you can provide feedback and help us gauge the effectiveness of the materials. </p>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->
