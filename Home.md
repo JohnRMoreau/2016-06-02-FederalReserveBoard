@@ -1,5 +1,5 @@
 ---
-layout: workshop
+layout: page
 root: .
 title: Data Carpentry at the Fed - Details
 ---
